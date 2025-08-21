@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Summarizer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+      }
+      input[type="text"] {
+        width: 60%;
+        padding: 10px;
+      }
+      button {
+        padding: 10px 15px;
+      }
+      .summary {
+        margin-top: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Website Summarizer</h1>
+    <form method="POST">
+      <input
+        type="text"
+        name="url"
+        placeholder="Enter a website URL"
+        required
+      />
+      <button type="submit">Summarize</button>
+    </form>
+
+    {% if summary %}
+    <div class="summary">
+      <h2>Summary:</h2>
+      <p>{{ summary }}</p>
+    </div>
+    {% endif %}
+  </body>
+</html>
